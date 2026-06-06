@@ -27,7 +27,7 @@ export default function Footer() {
 
         {/* Top Section */}
         <div className="flex flex-col md:flex-row items-start md:items-center md:gap-6 mb-8 md:mb-14">
-          <h2 className="w-full animate-fairy-shimmer text-[32px] md:text-5xl font-bold tracking-tight leading-tight">
+          <h2 className="relative w-full md:w-max animate-fairy-shimmer text-[32px] md:text-5xl font-bold tracking-tight leading-tight">
 
             {/* Mobile Hand Layout (Floated to allow text wrapping) */}
             <div className="md:hidden float-right ml-4 mt-6 flex-shrink-0">
@@ -42,18 +42,18 @@ export default function Footer() {
 
             THANK YOU FOR YOUR CURIOSITY.<br className="hidden md:block" />
             LET'S BUILD SOMETHING COOL.
+            
+            {/* Desktop Hand Layout (Centered vertically relative to the entire text block) */}
+            <div className="hidden md:block absolute top-1/2 -translate-y-1/2 left-full ml-6">
+              <Image
+                src="/hand-icon.svg"
+                alt="Hand Icon"
+                width={100}
+                height={100}
+                className="drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] w-[76px] h-auto object-contain max-w-none"
+              />
+            </div>
           </h2>
-
-          {/* Desktop Hand Layout */}
-          <div className="hidden md:block flex-shrink-0 mt-4 md:mt-0">
-            <Image
-              src="/hand-icon.svg"
-              alt="Hand Icon"
-              width={100}
-              height={100}
-              className="drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] w-[84px] h-auto object-contain"
-            />
-          </div>
         </div>
 
         {/* Middle Section */}
