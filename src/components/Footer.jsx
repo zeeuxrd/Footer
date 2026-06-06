@@ -27,7 +27,7 @@ export default function Footer() {
 
         {/* Top Section */}
         <div className="flex flex-col md:flex-row items-start md:items-center md:gap-6 mb-8 md:mb-14">
-          <h2 className="relative w-full md:w-max animate-fairy-shimmer text-[32px] md:text-5xl font-bold tracking-tight leading-tight">
+          <h2 className="relative w-full md:w-auto md:inline-block animate-fairy-shimmer text-[32px] md:text-5xl font-bold tracking-tight leading-tight">
 
             {/* Mobile Hand Layout (Floated to allow text wrapping) */}
             <div className="md:hidden float-right ml-4 mt-6 flex-shrink-0">
