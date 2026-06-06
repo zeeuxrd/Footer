@@ -143,7 +143,7 @@ export default function Footer() {
         </div>
 
         {/* Desktop Absolute Layout (Hidden on Mobile) */}
-        <div className="hidden md:block absolute -bottom-6 left-0 right-0 h-full w-full mx-auto overflow-visible pointer-events-none">
+        <div className="hidden md:block absolute -bottom-6 left-0 right-0 h-full w-full max-w-7xl mx-auto overflow-visible pointer-events-none">
           {stickers.map((s, i) => (
             <div key={`d-${i}`} className={s.desktopClass}>
               <Sticker text={s.text} color={s.color} rotation={s.rotation} delay={s.delay} />
