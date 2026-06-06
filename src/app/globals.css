@@ -24,3 +24,112 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes dropJiggle {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px) rotate(-15deg);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0) rotate(10deg);
+  }
+  50% {
+    transform: translateY(-40px) rotate(-6deg);
+  }
+  70% {
+    transform: translateY(0) rotate(4deg);
+  }
+  85% {
+    transform: translateY(-15px) rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.animate-float-in {
+  animation: dropJiggle 1s ease-out forwards;
+}
+
+@keyframes hoverJiggle {
+  0% { transform: scale(1.1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(-5deg); }
+  50% { transform: scale(1.1) rotate(5deg); }
+  75% { transform: scale(1.1) rotate(-5deg); }
+  100% { transform: scale(1.1) rotate(0deg); }
+}
+
+.hover-jiggle:hover {
+  animation: hoverJiggle 0.4s ease-in-out infinite;
+}
+
+@keyframes nearbyShake {
+  0%, 100% { transform: rotate(0deg) scale(1.05); }
+  25% { transform: rotate(-6deg) scale(1.05); }
+  75% { transform: rotate(6deg) scale(1.05); }
+}
+
+.nearby-shake .hover-jiggle {
+  animation: nearbyShake 0.2s ease-in-out infinite !important;
+}
+
+@keyframes glitter {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1) rotate(90deg); opacity: 1; }
+  100% { transform: scale(0) rotate(180deg); opacity: 0; }
+}
+
+.animate-glitter {
+  animation: glitter 0.8s ease-in-out infinite;
+}
+
+@keyframes fairyShimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -100% center; }
+}
+
+.animate-fairy-shimmer {
+  background: linear-gradient(
+    110deg,
+    #ffffff 30%,
+    rgba(255, 255, 255, 0.1) 45%,
+    #fbbf24 48%,
+    #ffffff 50%,
+    #f472b6 52%,
+    rgba(255, 255, 255, 0.1) 55%,
+    #ffffff 70%
+  );
+  background-size: 300% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: fairyShimmer 2.5s cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s forwards;
+}
+
+@keyframes waveWobble {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-15deg); }
+  40% { transform: rotate(10deg); }
+  60% { transform: rotate(-10deg); }
+  80% { transform: rotate(5deg); }
+}
+
+.animate-wave-wobble {
+  animation: waveWobble 2.5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
